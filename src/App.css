@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700;900&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  /* background: #0a192f; */
+  background: #f6fbff;
+  background-position: cover;
+  font-size: 19px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img {
+  height: 300px;
+  width: 250px;
+  opacity: 0.2;
+  position: absolute;
+  object-fit: contain;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom: 10px double #e52e71;
+}
+
+.img:hove {
+  opacity: 0;
+}
+
+.left-container {
+  opacity: 0.6;
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  transform: rotate(25deg);
+  z-index: -1;
+  display: flex;
+  position: absolute;
+  animation: bounds 3s ease-in-out infinite;
+}
+
+@keyframes bounds {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/* MUI MODIFICATION */
+.MuiButton-outlined {
+  color: #10101d;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #ffffff;
+}
+
+html::-webkit-scrollbar {
+  width: 30px;
+  height: 30px;
+}
+
+/* The grabbable scrollbar button  */
+html::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ff8a00),
+    to(#e52e71)
+  );
+  background: linear-gradient(180deg, #ff8a00, #e52e71);
+  border-radius: 30px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* The vertical scrollbar background */
+html::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #100e17 0, #100e17);
+}
+
+.desc_container {
+  width: 95%;
+  height: 200px;
+  padding: 0 0 0 40px;
+  border-radius: 10;
+}
+
+.desc_container::-webkit-scrollbar {
+  scrollbar-width: none;
+}
